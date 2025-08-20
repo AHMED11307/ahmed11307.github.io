@@ -3,93 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خدماتنا - الرعاية الذهبية</title>
-    <meta name="description" content="استكشف مجموعة واسعة من خدمات الرعاية المتكاملة التي تقدمها الرعاية الذهبية.">
+    <title>الرعاية الذهبية - خدماتنا</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Inter for general text, Cairo for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #FDF5E6; color: #2F4F4F; line-height: 1.7; direction: rtl; text-align: right; }
-        h1, h2, h3 { font-family: 'Inter', sans-serif; color: #8B4513; }
-        .golden-gradient { background: linear-gradient(to right, #D4AF37, #FFD700); }
-        .golden-border { border-color: #D4AF37; }
-        .text-golden { color: #D4AF37; }
+        body {
+            font-family: 'Cairo', sans-serif; /* خط القاهرة المفضل للعربية */
+            background-color: #FDFBF7; /* خلفية بيضاء كريمية ناعمة */
+        }
+        .inter-font {
+            font-family: 'Inter', sans-serif; /* للغة الإنجليزية أو الأرقام */
+        }
+        /* درجات الألوان الذهبية الهادئة والناعمة */
+        .bg-gradient-header {
+            background-image: linear-gradient(to right, #C59D5B, #DAA520); /* ذهبي برونزي لذهبي أكثر وضوحًا */
+        }
+        .text-golden-main {
+            color: #DAA520; /* لون ذهبي متوسط */
+        }
+        .text-golden-dark {
+            color: #C59D5B; /* لون ذهبي برونزي داكن */
+        }
+        .bg-golden-button {
+            background-color: #DAA520; /* لون ذهبي للأزرار */
+        }
+        .hover\:bg-golden-dark:hover {
+            background-color: #C59D5B; /* لون ذهبي برونزي داكن عند التمرير */
+        }
+        .border-golden {
+            border-color: #DAA520;
+        }
+        .bg-light-cream-gold {
+            background-color: #EEDBB6; /* لون ذهبي فاتح كريمي للخلفيات */
+        }
+        /* Custom scrollbar for a nicer look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C59D5B; /* لون ذهبي هادئ */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #DAA520; /* لون ذهبي أغمق عند التمرير */
+        }
     </style>
 </head>
-<body class="flex flex-col min-h-screen">
-    <header class="bg-[#FDF5E6] p-4 shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
-            <div class="flex items-center mb-4 md:mb-0">
-                <img src="https://placehold.co/60x60/D4AF37/FFFFFF?text=شعار" alt="شعار الرعاية الذهبية" class="h-16 w-16 rounded-full mr-3 border-2 golden-border shadow-md">
-                <h1 class="text-4xl font-extrabold text-[#8B4513]">الرعاية الذهبية</h1>
+<body class="text-gray-800">
+
+    <!-- Header Section - Navigation Bar (repeated for consistency) -->
+    <header class="bg-gradient-header text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 rtl:space-x-reverse mb-3 md:mb-0">
+                <img src="الرعاية الذهبية 1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/64x64/DAA520/ffffff?text=Logo';" alt="Golden Care Logo" class="w-16 h-16 object-cover rounded-full border-2 border-white shadow-md">
+                <h1 class="text-3xl font-extrabold tracking-wide">الرعاية الذهبية</h1>
             </div>
-            <nav class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-lg font-medium">
-                <a href="index.html" class="text-gray-700 hover:text-golden transition-colors">الرئيسية</a>
-                <a href="about.html" class="text-gray-700 hover:text-golden transition-colors">من نحن</a>
-                <a href="services.html" class="text-gray-700 hover:text-golden transition-colors">خدماتنا</a>
-                <a href="articles.html" class="text-gray-700 hover:text-golden transition-colors">المقالات</a>
-                <a href="jobs.html" class="text-gray-700 hover:text-golden transition-colors">الوظائف</a>
-                <a href="privacy.html" class="text-gray-700 hover:text-golden transition-colors">سياسة الخصوصية</a>
-                <a href="contact.html" class="text-gray-700 hover:text-golden transition-colors">اتصل بنا</a>
+            <nav>
+                <ul class="flex flex-wrap justify-center md:space-x-6 rtl:space-x-reverse space-x-3 text-lg font-medium">
+                    <li><a href="index.html" class="hover:text-amber-200 transition duration-300">الرئيسية</a></li>
+                    <li><a href="about.html" class="hover:text-amber-200 transition duration-300">من نحن</a></li>
+                    <li><a href="services.html" class="hover:text-amber-200 transition duration-300">خدماتنا</a></li>
+                    <li><a href="team.html" class="hover:text-amber-200 transition duration-300">فريقنا</a></li>
+                    <li><a href="history.html" class="hover:text-amber-200 transition duration-300">تاريخنا</a></li>
+                    <li><a href="jobs.html" class="hover:text-amber-200 transition duration-300">وظائف</a></li>
+                    <li><a href="privacy.html" class="hover:text-amber-200 transition duration-300">الخصوصية</a></li>
+                    <li><a href="contact.html" class="hover:text-amber-200 transition duration-300">اتصل بنا</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <main class="flex-grow container mx-auto p-6 md:p-10">
-        <section class="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-12 text-center">
-            <h2 class="text-4xl font-bold text-golden mb-8">خدماتنا المتكاملة</h2>
+    <!-- Page Content - Services -->
+    <main class="py-16 bg-white px-6">
+        <div class="container mx-auto">
+            <h2 class="text-5xl font-extrabold text-golden-dark text-center mb-12">
+                خدماتنا المتكاملة: رعاية شاملة لحياة أفضل ✨
+            </h2>
+
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-lg leading-relaxed text-gray-700">
+                    نقدم مجموعة واسعة من الخدمات المصممة لتلبية الاحتياجات المتغيرة لعملائنا، مع التركيز على الجودة والاحترافية والتعاطف.
+                </p>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- خدمة 1 -->
-                <div class="border golden-border rounded-lg p-6 shadow-md text-center">
-                    <div class="text-5xl text-golden mb-4">⚕️</div>
-                    <h3 class="text-2xl font-semibold text-[#8B4513] mb-3">الرعاية الطبية المنزلية</h3>
-                    <p class="text-gray-700">فريق طبي وتمريضي متخصص يقدم الرعاية في راحة منزلك، بما في ذلك المتابعة الدورية، إدارة الأدوية، وتغيير الجروح.</p>
+                <!-- خدمة 1: الرعاية الطبية المنزلية المتخصصة -->
+                <div class="bg-light-cream-gold rounded-xl shadow-lg p-8 flex flex-col items-center text-center border-b-4 border-golden transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl text-golden-main mb-6"><i class="fas fa-hand-holding-medical"></i></div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">الرعاية الطبية المنزلية المتخصصة</h4>
+                    <p class="text-gray-700">ممرضون وممرضات مؤهلون يقدمون رعاية طبية متخصصة، إدارة الأدوية، ومراقبة الحالات الصحية.</p>
                 </div>
-                <!-- خدمة 2 -->
-                <div class="border golden-border rounded-lg p-6 shadow-md text-center">
-                    <div class="text-5xl text-golden mb-4">💖</div>
-                    <h3 class="text-2xl font-semibold text-[#8B4513] mb-3">المساعدة اليومية والشخصية</h3>
-                    <p class="text-gray-700">دعم في الأنشطة اليومية مثل النظافة الشخصية، إعداد الوجبات، والمساعدة في التنقل، لضمان استقلالية وكرامة.</p>
+
+                <!-- خدمة 2: المساعدة في الأنشطة اليومية والمعيشة المستقلة -->
+                <div class="bg-light-cream-gold rounded-xl shadow-lg p-8 flex flex-col items-center text-center border-b-4 border-golden transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl text-golden-main mb-6"><i class="fas fa-bath"></i></div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">المساعدة في الأنشطة اليومية</h4>
+                    <p class="text-gray-700">فريق من المساعدين المدربين يقدمون الدعم في الحركة، النظافة الشخصية، والتغذية.</p>
                 </div>
-                <!-- خدمة 3 -->
-                <div class="border golden-border rounded-lg p-6 shadow-md text-center">
-                    <div class="text-5xl text-golden mb-4">🧠</div>
-                    <h3 class="text-2xl font-semibold text-[#8B4513] mb-3">الدعم النفسي والاجتماعي</h3>
-                    <p class="text-gray-700">جلسات دعم نفسي، أنشطة اجتماعية، ومرافقة لتعزيز الصحة العقلية وتقليل الشعور بالوحدة.</p>
+
+                <!-- خدمة 3: خدمات الطهي والتغذية المخصصة -->
+                <div class="bg-light-cream-gold rounded-xl shadow-lg p-8 flex flex-col items-center text-center border-b-4 border-golden transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl text-golden-main mb-6"><i class="fas fa-kitchen-set"></i></div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">خدمات الطهي والتغذية المخصصة</h4>
+                    <p class="text-gray-700">طهاتنا متخصصون في إعداد وجبات صحية ولذيذة، مع مراعاة الحميات الغذائية الخاصة.</p>
                 </div>
-                <!-- خدمة 4 -->
-                <div class="border golden-border rounded-lg p-6 shadow-md text-center">
-                    <div class="text-5xl text-golden mb-4">♿</div>
-                    <h3 class="text-2xl font-semibold text-[#8B4513] mb-3">العلاج الطبيعي والتأهيل</h3>
-                    <p class="text-gray-700">برامج تأهيل مخصصة تحت إشراف أخصائيين لمساعدة الأفراد على استعادة القدرة الحركية وتحسين جودة الحياة.</p>
+
+                <!-- خدمة 4: خدمات النظافة والتعقيم -->
+                <div class="bg-light-cream-gold rounded-xl shadow-lg p-8 flex flex-col items-center text-center border-b-4 border-golden transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl text-golden-main mb-6"><i class="fas fa-broom"></i></div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">خبراء النظافة</h4>
+                    <p class="text-gray-700">فريق متخصص في توفير بيئة معيشية نظيفة ومعقمة، لضمان صحة وراحة عملائنا.</p>
                 </div>
-                <!-- خدمة 5 -->
-                <div class="border golden-border rounded-lg p-6 shadow-md text-center">
-                    <div class="text-5xl text-golden mb-4">🍽️</div>
-                    <h3 class="text-2xl font-semibold text-[#8B4513] mb-3">التغذية العلاجية</h3>
-                    <p class="text-gray-700">استشارات غذائية وخطط وجبات مخصصة بالتعاون مع أخصائيي التغذية لدعم الصحة والتعافي.</p>
+
+                <!-- خدمة 5: الرعاية المصاحبة والدعم النفسي -->
+                <div class="bg-light-cream-gold rounded-xl shadow-lg p-8 flex flex-col items-center text-center border-b-4 border-golden transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl text-golden-main mb-6"><i class="fas fa-comments"></i></div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">الرعاية المصاحبة والدعم النفسي</h4>
+                    <p class="text-gray-700">تقديم الدعم النفسي والاجتماعي لتعزيز الصحة العقلية والرفاهية.</p>
                 </div>
-                <!-- خدمة 6 -->
-                <div class="border golden-border rounded-lg p-6 shadow-md text-center">
-                    <div class="text-5xl text-golden mb-4">🏠</div>
-                    <h3 class="text-2xl font-semibold text-[#8B4513] mb-3">المرافقة والتسوق</h3>
-                    <p class="text-gray-700">مرافقة الأفراد في الزيارات الخارجية، المواعيد الطبية، أو التسوق، لضمان راحتهم وأمانهم.</p>
+
+                <!-- خدمة 6: برامج التأهيل والعلاج الطبيعي -->
+                <div class="bg-light-cream-gold rounded-xl shadow-lg p-8 flex flex-col items-center text-center border-b-4 border-golden transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl text-golden-main mb-6"><i class="fas fa-dumbbell"></i></div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">برامج التأهيل والعلاج الطبيعي</h4>
+                    <p class="text-gray-700">مختصون يساعدون في استعادة القدرة الحركية وتحسين جودة الحياة.</p>
+                </div>
+
+                <!-- خدمة 7: رعاية الأطفال وجليسات المنازل المحترفات (من الصورة 3.jpg) -->
+                <div class="bg-light-cream-gold rounded-xl shadow-lg p-8 flex flex-col items-center text-center border-b-4 border-golden transform hover:scale-105 transition duration-300">
+                    <div class="text-5xl text-golden-main mb-6"><i class="fas fa-child"></i></div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">رعاية الأطفال وجليسات المنازل</h4>
+                    <p class="text-gray-700">لراحة بالك وطمأنينة قلبك على صغارك مع فريق من المحترفات.</p>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
+                <div>
+                    <h3 class="text-4xl font-extrabold text-golden-dark mb-6 text-right">
+                        فريقنا المتنوع: قوة التميز 🤝
+                    </h3>
+                    <p class="text-lg leading-relaxed text-gray-700 mb-4 text-right">
+                        في "الرعاية الذهبية"، نؤمن بأن جوهر الخدمة المتميزة يكمن في الأشخاص الذين يقدمونها. فريقنا ليس مجرد مجموعة من الموظفين، بل هو عائلة متكاملة من المحترفين، يتمتعون بالخبرة، الكفاءة، والأهم من ذلك، الشغف الحقيقي بالرعاية والاهتمام بالآخرين.
+                    </p>
+                    <ul class="text-lg leading-relaxed text-gray-700 list-disc list-inside text-right space-y-3">
+                        <li><span class="font-bold text-golden-dark">الممرضون والممرضات:</span> مصريون وأجانب مؤهلون تأهيلاً عالياً، يحملون الشهادات الدولية ويتمتعون بسنوات من الخبرة.</li>
+                        <li><span class="font-bold text-golden-dark">المساعدون:</span> فريق مدرب على أعلى مستوى، يقدم الدعم في الأنشطة اليومية لضمان راحة العميل وسلامته.</li>
+                        <li><span class="font-bold text-golden-dark">الطباخون الموهوبون:</span> متخصصون في إعداد وجبات صحية ولذيذة، مع مراعاة الحميات الغذائية الخاصة.</li>
+                        <li><span class="font-bold text-golden-dark">خبراء النظافة:</span> فريق متخصص في توفير بيئة معيشية نظيفة ومعقمة.</li>
+                    </ul>
+                </div>
+                <div class="flex justify-center">
+                    <!-- استخدام الصورة & Co..png مع مسار صحيح و fallback -->
+                    <img src="& Co..png" onerror="this.onerror=null;this.src='https://placehold.co/600x400/C59D5B/ffffff?text=Our+Team';" alt="Our Team" class="rounded-xl shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out w-full max-w-lg h-auto object-cover">
                 </div>
             </div>
-            <div class="text-center mt-10">
-                <a href="contact.html" class="inline-block golden-gradient text-white font-bold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all-fast">
-                    تواصل معنا لبدء الرعاية
-                </a>
+
+            <div class="text-center mt-16">
+                <h3 class="text-4xl font-extrabold text-golden-dark mb-8">
+                    التدريب المستمر والاحترافية 🎓
+                </h3>
+                <p class="text-lg leading-relaxed text-gray-700 max-w-3xl mx-auto">
+                    كل فرد في فريق "الرعاية الذهبية" يخضع لبرامج تدريب مستمرة لضمان بقائه على اطلاع بأحدث ممارسات الرعاية والمعايير الدولية. نلتزم بأعلى معايير الاحترافية، الأخلاق، والخصوصية في جميع تعاملاتنا.
+                </p>
             </div>
-        </section>
+
+        </div>
     </main>
 
-    <footer class="bg-[#2F4F4F] text-gray-300 p-6 text-center mt-auto border-t golden-border">
-        <p class="mb-2 text-lg">الرعاية الذهبية - رفيقك نحو حياة أفضل.</p>
-        <p class="text-sm">&copy; 2025 الرعاية الذهبية. جميع الحقوق محفوظة.</p>
-        <div class="mt-4 text-sm">
-            <a href="privacy.html" class="text-golden hover:underline mx-2">سياسة الخصوصية</a>
-            <a href="contact.html" class="text-golden hover:underline mx-2">اتصل بنا</a>
+    <!-- Footer Section (repeated for consistency) -->
+    <footer class="bg-gray-900 text-gray-300 py-8 px-6">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">&copy; 2025 الرعاية الذهبية. جميع الحقوق محفوظة.</p>
+            <div class="flex justify-center space-x-6 rtl:space-x-reverse">
+                <a href="#" class="hover:text-golden-main transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="hover:text-golden-main transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-golden-main transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                <a href="#" class="hover:text-golden-main transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+            <p class="mt-4 text-sm opacity-75">
+                تصميم وتطوير بواسطة فريق الرعاية الذهبية
+            </p>
         </div>
-        <p class="mt-2 text-xs">العنوان: مصر، القاهرة، شارع النيل (عنوان افتراضي)</p>
     </footer>
+
 </body>
 </html>

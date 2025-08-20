@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - الرعاية الذهبية</title>
+    <meta name="description" content="تواصل مع فريق الرعاية الذهبية للاستفسارات والدعم.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FDF5E6; color: #2F4F4F; line-height: 1.7; direction: rtl; text-align: right; }
+        h1, h2, h3 { font-family: 'Inter', sans-serif; color: #8B4513; }
+        .golden-gradient { background: linear-gradient(to right, #D4AF37, #FFD700); }
+        .golden-border { border-color: #D4AF37; }
+        .text-golden { color: #D4AF37; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-[#FDF5E6] p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="https://placehold.co/60x60/D4AF37/FFFFFF?text=شعار" alt="شعار الرعاية الذهبية" class="h-16 w-16 rounded-full mr-3 border-2 golden-border shadow-md">
+                <h1 class="text-4xl font-extrabold text-[#8B4513]">الرعاية الذهبية</h1>
+            </div>
+            <nav class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-lg font-medium">
+                <a href="index.html" class="text-gray-700 hover:text-golden transition-colors">الرئيسية</a>
+                <a href="about.html" class="text-gray-700 hover:text-golden transition-colors">من نحن</a>
+                <a href="services.html" class="text-gray-700 hover:text-golden transition-colors">خدماتنا</a>
+                <a href="articles.html" class="text-gray-700 hover:text-golden transition-colors">المقالات</a>
+                <a href="jobs.html" class="text-gray-700 hover:text-golden transition-colors">الوظائف</a>
+                <a href="privacy.html" class="text-gray-700 hover:text-golden transition-colors">سياسة الخصوصية</a>
+                <a href="contact.html" class="text-gray-700 hover:text-golden transition-colors">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto p-6 md:p-10">
+        <section class="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-12 text-center">
+            <h2 class="text-4xl font-bold text-golden mb-8">تواصل معنا</h2>
+            <p class="text-gray-700 text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
+                يسعدنا دائمًا سماع صوتكم والإجابة على استفساراتكم. لا تترددوا في التواصل معنا عبر الطرق التالية:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- معلومات الاتصال -->
+                <div class="border golden-border rounded-lg p-6 shadow-md text-right">
+                    <h3 class="text-2xl font-semibold text-[#8B4513] mb-4">معلومات الاتصال</h3>
+                    <p class="text-gray-700 mb-2"><strong>البريد الإلكتروني:</strong> <a href="mailto:info@goldencare.com" class="text-blue-600 hover:underline">info@goldencare.com</a></p>
+                    <p class="text-gray-700 mb-2"><strong>الهاتف:</strong> +20 123 456 7890</p>
+                    <p class="text-gray-700 mb-2"><strong>العنوان:</strong> 123 شارع النيل، القاهرة، مصر</p>
+                    <div class="mt-6">
+                        <h4 class="text-xl font-semibold text-golden mb-2">تابعنا على:</h4>
+                        <div class="flex justify-center md:justify-start gap-4 text-3xl">
+                            <!-- أيقونات وسائل التواصل الاجتماعي (يمكن استبدالها بروابط حقيقية) -->
+                            <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors" title="فيسبوك">📘</a>
+                            <a href="#" class="text-purple-600 hover:text-purple-800 transition-colors" title="انستغرام">📸</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-600 transition-colors" title="تويتر">🐦</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نموذج الاتصال (واجهة أمامية فقط) -->
+                <div class="border golden-border rounded-lg p-6 shadow-md text-right">
+                    <h3 class="text-2xl font-semibold text-[#8B4513] mb-4">أرسل لنا رسالة</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">الاسم الكامل:</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-golden outline-none text-gray-800" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">البريد الإلكتروني:</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-golden outline-none text-gray-800" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">رسالتك:</label>
+                            <textarea id="message" name="message" rows="6" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-golden outline-none text-gray-800" required></textarea>
+                        </div>
+                        <button type="submit" class="golden-gradient text-white font-bold py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all-fast w-full">
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                    <div id="contact-message" class="mt-4 text-center text-sm hidden"></div>
+                    <p class="text-gray-400 text-xs mt-4 text-center">
+                        *ملاحظة: لإرسال الرسائل فعليًا، ستحتاج إلى ربط هذا النموذج بخدمة backend أو خدمة بريد إلكتروني (مثل Formspree أو Netlify Forms) حيث لا يمكن لصفحة HTML وحدها معالجة إرسال النماذج.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#2F4F4F] text-gray-300 p-6 text-center mt-auto border-t golden-border">
+        <p class="mb-2 text-lg">الرعاية الذهبية - رفيقك نحو حياة أفضل.</p>
+        <p class="text-sm">&copy; 2025 الرعاية الذهبية. جميع الحقوق محفوظة.</p>
+        <div class="mt-4 text-sm">
+            <a href="privacy.html" class="text-golden hover:underline mx-2">سياسة الخصوصية</a>
+            <a href="contact.html" class="text-golden hover:underline mx-2">اتصل بنا</a>
+        </div>
+        <p class="mt-2 text-xs">العنوان: مصر، القاهرة، شارع النيل (عنوان افتراضي)</p>
+    </footer>
+
+    <script>
+        const contactForm = document.getElementById('contact-form');
+        const contactMessage = document.getElementById('contact-message');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // منع إعادة تحميل الصفحة
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && message) {
+                contactMessage.textContent = `شكراً لرسالتك يا ${name}! لقد تلقينا رسالتك بنجاح وسنتواصل معك قريباً.`;
+                contactMessage.classList.remove('hidden');
+                contactMessage.style.color = '#28a745'; // لون أخضر للنجاح
+                contactForm.reset(); // تفريغ حقول النموذج
+            } else {
+                contactMessage.textContent = 'من فضلك املأ جميع الحقول المطلوبة.';
+                contactMessage.classList.remove('hidden');
+                contactMessage.style.color = '#dc3545'; // لون أحمر للخطأ
+            }
+            // ملاحظة: لكي يتم إرسال الرسالة فعلياً، يجب ربط هذا النموذج بخدمة backend.
+        });
+    </script>
+</body>
+</html>

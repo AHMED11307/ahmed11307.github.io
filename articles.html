@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المقالات - معلومات تفيدك | الرعاية الذهبية</title>
+    <meta name="description" content="مكتبة مقالات الرعاية الذهبية: نصائح صحية، معلومات طبية، وتوجيهات لنمط حياة أفضل.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #FDF5E6; color: #2F4F4F; line-height: 1.7; direction: rtl; text-align: right; }
+        h1, h2, h3 { font-family: 'Inter', sans-serif; color: #8B4513; }
+        .golden-gradient { background: linear-gradient(to right, #D4AF37, #FFD700); }
+        .golden-border { border-color: #D4AF37; }
+        .text-golden { color: #D4AF37; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-[#FDF5E6] p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="https://placehold.co/60x60/D4AF37/FFFFFF?text=شعار" alt="شعار الرعاية الذهبية" class="h-16 w-16 rounded-full mr-3 border-2 golden-border shadow-md">
+                <h1 class="text-4xl font-extrabold text-[#8B4513]">الرعاية الذهبية</h1>
+            </div>
+            <nav class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-lg font-medium">
+                <a href="index.html" class="text-gray-700 hover:text-golden transition-colors">الرئيسية</a>
+                <a href="about.html" class="text-gray-700 hover:text-golden transition-colors">من نحن</a>
+                <a href="services.html" class="text-gray-700 hover:text-golden transition-colors">خدماتنا</a>
+                <a href="articles.html" class="text-gray-700 hover:text-golden transition-colors">المقالات</a>
+                <a href="jobs.html" class="text-gray-700 hover:text-golden transition-colors">الوظائف</a>
+                <a href="privacy.html" class="text-gray-700 hover:text-golden transition-colors">سياسة الخصوصية</a>
+                <a href="contact.html" class="text-gray-700 hover:text-golden transition-colors">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto p-6 md:p-10">
+        <section class="bg-white rounded-xl shadow-lg p-8 md:p-10 mb-12 text-center">
+            <h2 class="text-4xl font-bold text-golden mb-8">معلومات تفيدك: مكتبة المقالات</h2>
+            <p class="text-gray-700 text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
+                في هذا القسم، تجدون مجموعة واسعة من المقالات المتخصصة التي تهدف إلى إثراء معرفتكم وتقديم نصائح قيمة حول مختلف جوانب الرعاية الصحية، نمط الحياة الصحي، وأحدث التطورات في مجال الرعاية.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- مثال لمقال 1 -->
+                <article id="article1" class="border golden-border rounded-lg p-6 shadow-md text-right">
+                    <h3 class="text-2xl font-semibold text-[#8B4513] mb-3">أهمية التغذية المتوازنة لكبار السن</h3>
+                    <img src="https://placehold.co/400x250/D4AF37/FDF5E6?text=تغذية" alt="صورة تغذية كبار السن" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <p class="text-gray-700 text-base mb-4">تعتبر التغذية السليمة حجر الزاوية في الحفاظ على صحة كبار السن ووقايتهم من الأمراض المزمنة. اكتشف كيف يمكن لنظام غذائي غني بالعناصر الغذائية الأساسية أن يعزز طاقتهم ويحسن جودة حياتهم.</p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">اقرأ المقال كاملاً</a>
+                </article>
+
+                <!-- مثال لمقال 2 -->
+                <article id="article2" class="border golden-border rounded-lg p-6 shadow-md text-right">
+                    <h3 class="text-2xl font-semibold text-[#8B4513] mb-3">فوائد النشاط البدني الخفيف على الصحة النفسية</h3>
+                    <img src="https://placehold.co/400x250/FFD700/8B4513?text=نشاط+بدني" alt="صورة نشاط بدني" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <p class="text-gray-700 text-base mb-4">ليس النشاط البدني مفيدًا للجسم فحسب، بل يلعب دورًا حاسمًا في تحسين الصحة العقلية والمزاج. تعرف على التمارين البسيطة التي يمكن أن تحدث فرقًا كبيرًا في يومك.</p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">اقرأ المقال كاملاً</a>
+                </article>
+
+                <!-- مثال لمقال 3 (يمكنك إضافة المزيد) -->
+                <article id="article3" class="border golden-border rounded-lg p-6 shadow-md text-right">
+                    <h3 class="text-2xl font-semibold text-[#8B4513] mb-3">كيف تختار الرعاية المنزلية المناسبة؟</h3>
+                    <img src="https://placehold.co/400x250/D4AF37/FDF5E6?text=رعاية+منزلية" alt="صورة رعاية منزلية" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <p class="text-gray-700 text-base mb-4">عند البحث عن الرعاية المنزلية، هناك العديد من العوامل التي يجب أخذها في الاعتبار لضمان حصول أحبائك على أفضل خدمة. نقدم لك دليلاً شاملاً لمساعدتك في اتخاذ القرار.</p>
+                    <a href="#" class="text-blue-600 hover:underline font-medium">اقرأ المقال كاملاً</a>
+                </article>
+
+                <!-- أضف المزيد من المقالات هنا بنفس الهيكل -->
+            </div>
+            <p class="text-center text-gray-600 text-sm mt-8">
+                نعمل باستمرار على إضافة مقالات جديدة لتزويدكم بأحدث المعلومات.
+            </p>
+        </section>
+    </main>
+
+    <footer class="bg-[#2F4F4F] text-gray-300 p-6 text-center mt-auto border-t golden-border">
+        <p class="mb-2 text-lg">الرعاية الذهبية - رفيقك نحو حياة أفضل.</p>
+        <p class="text-sm">&copy; 2025 الرعاية الذهبية. جميع الحقوق محفوظة.</p>
+        <div class="mt-4 text-sm">
+            <a href="privacy.html" class="text-golden hover:underline mx-2">سياسة الخصوصية</a>
+            <a href="contact.html" class="text-golden hover:underline mx-2">اتصل بنا</a>
+        </div>
+        <p class="mt-2 text-xs">العنوان: مصر، القاهرة، شارع النيل (عنوان افتراضي)</p>
+    </footer>
+</body>
+</html>

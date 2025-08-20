@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرعاية الذهبية - أدوات الذكاء الاصطناعي</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Inter for general text, Cairo for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif; /* خط القاهرة المفضل للعربية */
+            background-color: #FDFBF7; /* خلفية بيضاء كريمية ناعمة */
+        }
+        .inter-font {
+            font-family: 'Inter', sans-serif; /* للغة الإنجليزية أو الأرقام */
+        }
+        /* درجات الألوان الذهبية الهادئة والناعمة */
+        .bg-gradient-header {
+            background-image: linear-gradient(to right, #C59D5B, #DAA520); /* ذهبي برونزي لذهبي أكثر وضوحًا */
+        }
+        .text-golden-main {
+            color: #DAA520; /* لون ذهبي متوسط */
+        }
+        .text-golden-dark {
+            color: #C59D5B; /* لون ذهبي برونزي داكن */
+        }
+        .bg-golden-button {
+            background-color: #DAA520; /* لون ذهبي للأزرار */
+        }
+        .hover\:bg-golden-dark:hover {
+            background-color: #C59D5B; /* لون ذهبي برونزي داكن عند التمرير */
+        }
+        .border-golden {
+            border-color: #DAA520;
+        }
+        .bg-light-cream-gold {
+            background-color: #EEDBB6; /* لون ذهبي فاتح كريمي للخلفيات */
+        }
+        /* Custom scrollbar for a nicer look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C59D5B; /* لون ذهبي هادئ */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #DAA520; /* لون ذهبي أغمق عند التمرير */
+        }
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #DAA520;
+            animation: spin 1s ease infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section - Navigation Bar -->
+    <header class="bg-gradient-header text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 rtl:space-x-reverse mb-3 md:mb-0">
+                <img src="الرعاية الذهبية 1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/64x64/DAA520/ffffff?text=Logo';" alt="Golden Care Logo" class="w-16 h-16 object-cover rounded-full border-2 border-white shadow-md">
+                <h1 class="text-3xl font-extrabold tracking-wide">الرعاية الذهبية</h1>
+            </div>
+            <nav>
+                <ul class="flex flex-wrap justify-center md:space-x-6 rtl:space-x-reverse space-x-3 text-lg font-medium">
+                    <li><a href="index.html" class="hover:text-amber-200 transition duration-300">الرئيسية</a></li>
+                    <li><a href="about.html" class="hover:text-amber-200 transition duration-300">من نحن</a></li>
+                    <li><a href="services.html" class="hover:text-amber-200 transition duration-300">خدماتنا</a></li>
+                    <li><a href="team.html" class="hover:text-amber-200 transition duration-300">فريقنا</a></li>
+                    <li><a href="history.html" class="hover:text-amber-200 transition duration-300">تاريخنا</a></li>
+                    <li><a href="jobs.html" class="hover:text-amber-200 transition duration-300">وظائف</a></li>
+                    <li><a href="privacy.html" class="hover:text-amber-200 transition duration-300">الخصوصية</a></li>
+                    <li><a href="contact.html" class="hover:text-amber-200 transition duration-300">اتصل بنا</a></li>
+                    <li><a href="ai_tools.html" class="hover:text-amber-200 transition duration-300">أدوات الذكاء الاصطناعي</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Content - AI Tools -->
+    <main class="py-16 bg-light-cream-gold px-6 min-h-screen">
+        <div class="container mx-auto max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-golden">
+            <h2 class="text-5xl font-extrabold text-golden-dark text-center mb-12">
+                أدوات الذكاء الاصطناعي المتقدمة 🤖
+            </h2>
+            <p class="text-lg leading-relaxed text-gray-700 mb-8 text-center">
+                اكتشف قوة الذكاء الاصطناعي لتوليد صور فريدة وتحويل النصوص إلى كلام مسموع بجودة عالية.
+            </p>
+
+            <!-- Image Generation Section -->
+            <section class="mb-12 p-6 bg-light-cream-gold rounded-lg shadow-md border-b-4 border-golden">
+                <h3 class="text-4xl font-bold text-golden-dark mb-6 text-right">
+                    توليد الصور من النص 🖼️
+                </h3>
+                <p class="text-md leading-relaxed text-gray-700 mb-6 text-right">
+                    أدخل وصفًا تفصيليًا للصورة التي ترغب في إنشائها، وسيقوم الذكاء الاصطناعي بتحويل كلماتك إلى تحفة بصرية.
+                </p>
+                <div class="mb-4">
+                    <label for="imagePrompt" class="block text-gray-700 text-lg font-bold mb-2">وصف الصورة:</label>
+                    <textarea id="imagePrompt" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-golden-main" rows="4" placeholder="مثال: قطة لطيفة ترتدي قبعة صغيرة وتجلس على أرجوحة في حديقة خضراء مشرقة."></textarea>
+                </div>
+                <button id="generateImageBtn" class="bg-golden-button hover:bg-golden-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-center">
+                    توليد الصورة <i class="fas fa-magic mr-2 rtl:ml-2 rtl:mr-0"></i>
+                    <span id="imageSpinner" class="spinner hidden mr-2 rtl:ml-2 rtl:mr-0"></span>
+                </button>
+                <div id="imageResult" class="mt-8 text-center bg-white p-4 rounded-lg shadow-inner">
+                    <!-- الصورة الناتجة ستظهر هنا -->
+                    <p id="imageMessage" class="text-gray-500">سيتم عرض الصورة المولدة هنا.</p>
+                </div>
+            </section>
+
+            <!-- Text-to-Speech Section -->
+            <section class="mb-12 p-6 bg-light-cream-gold rounded-lg shadow-md border-b-4 border-golden">
+                <h3 class="text-4xl font-bold text-golden-dark mb-6 text-right">
+                    تحويل الكتابة إلى صوت 🔊
+                </h3>
+                <p class="text-md leading-relaxed text-gray-700 mb-6 text-right">
+                    اكتب أي نص ترغب في تحويله إلى كلام مسموع. يمكنك اختيار نبرة الصوت أو لهجته.
+                </p>
+                <div class="mb-4">
+                    <label for="ttsText" class="block text-gray-700 text-lg font-bold mb-2">النص للصوت:</label>
+                    <textarea id="ttsText" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-golden-main" rows="4" placeholder="مثال: أهلاً بك في الرعاية الذهبية، حيث نقدم لك أفضل الخدمات."></textarea>
+                </div>
+                <div class="mb-6">
+                    <label for="voiceSelect" class="block text-gray-700 text-lg font-bold mb-2">اختر الصوت (النبرة/اللهجة):</label>
+                    <select id="voiceSelect" class="block w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-golden-main">
+                        <option value="Kore">كوري (Kore) - نبرة ثابتة</option>
+                        <option value="Puck">باك (Puck) - نبرة مرحة</option>
+                        <option value="Zephyr">زفير (Zephyr) - نبرة مشرقة</option>
+                        <option value="Charon">شارون (Charon) - نبرة إخبارية</option>
+                        <option value="Fenrir">فنرير (Fenrir) - نبرة حماسية</option>
+                        <option value="Leda">ليدا (Leda) - نبرة شابة</option>
+                        <option value="Orus">أوروس (Orus) - نبرة حازمة</option>
+                        <option value="Aoede">أويد (Aoede) - نبرة سلسة</option>
+                        <option value="Callirrhoe">كاليروي (Callirrhoe) - نبرة سهلة</option>
+                        <option value="Autonoe">أوتونوي (Autonoe) - نبرة مشرقة</option>
+                        <option value="Enceladus">إنسيلادوس (Enceladus) - نبرة تنفسية</option>
+                        <option value="Iapetus">إيابيتوس (Iapetus) - نبرة واضحة</option>
+                        <option value="Umbriel">أومبريل (Umbriel) - نبرة سهلة</option>
+                        <option value="Algieba">ألجيبا (Algieba) - نبرة سلسة</option>
+                        <option value="Despina">ديسبينا (Despina) - نبرة سلسة</option>
+                        <option value="Erinome">إرينوم (Erinome) - نبرة واضحة</option>
+                        <option value="Algenib">ألجنيب (Algenib) - نبرة خشنة</option>
+                        <option value="Rasalgethi">راسالجيثي (Rasalgethi) - نبرة إخبارية</option>
+                        <option value="Laomedeia">لاوميديا (Laomedeia) - نبرة مرحة</option>
+                        <option value="Achernar">أخيرنار (Achernar) - نبرة ناعمة</option>
+                        <option value="Alnilam">ألنيلان (Alnilam) - نبرة ثابتة</option>
+                        <option value="Schedar">شيدار (Schedar) - نبرة متوازنة</option>
+                        <option value="Gacrux">جاكروكس (Gacrux) - نبرة ناضجة</option>
+                        <option value="Pulcherrima">بولشيريما (Pulcherrima) - نبرة جريئة</option>
+                        <option value="Achird">أشيرد (Achird) - نبرة ودودة</option>
+                        <option value="Zubenelgenubi">زوبينلجنوبي (Zubenelgenubi) - نبرة عادية</option>
+                        <option value="Vindemiatrix">فيندمياتريكس (Vindemiatrix) - نبرة لطيفة</option>
+                        <option value="Sadachbia">ساداشبيا (Sadachbia) - نبرة حيوية</option>
+                        <option value="Sadaltager">سادالتاجير (Sadaltager) - نبرة معرفية</option>
+                        <option value="Sulafat">سولافات (Sulafat) - نبرة دافئة</option>
+                    </select>
+                </div>
+                <button id="generateTtsBtn" class="bg-golden-button hover:bg-golden-dark text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition duration-300 flex items-center justify-center">
+                    تحويل إلى صوت <i class="fas fa-play-circle mr-2 rtl:ml-2 rtl:mr-0"></i>
+                    <span id="ttsSpinner" class="spinner hidden mr-2 rtl:ml-2 rtl:mr-0"></span>
+                </button>
+                <div id="ttsResult" class="mt-8 text-center bg-white p-4 rounded-lg shadow-inner">
+                    <!-- مشغل الصوت سيظهر هنا -->
+                    <p id="ttsMessage" class="text-gray-500">سيتم تشغيل الصوت هنا.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-8 px-6">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">&copy; 2025 الرعاية الذهبية. جميع الحقوق محفوظة.</p>
+            <div class="flex justify-center space-x-6 rtl:space-x-reverse">
+                <a href="#" class="hover:text-golden-main transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="hover:text-golden-main transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-golden-main transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                <a href="#" class="hover:text-golden-main transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+            <p class="mt-4 text-sm opacity-75">
+                تصميم وتطوير بواسطة فريق الرعاية الذهبية
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // دالة لتحويل Base64 إلى ArrayBuffer (لتحويل PCM إلى WAV)
+        function base64ToArrayBuffer(base64) {
+            const binaryString = atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes.buffer;
+        }
+
+        // دالة لتحويل PCM إلى WAV
+        function pcmToWav(pcm16Data, sampleRate) {
+            const pcmData = pcm16Data.buffer;
+            const numChannels = 1; // PCM is typically mono
+            const bytesPerSample = 2; // 16-bit PCM
+
+            const wavHeader = new ArrayBuffer(44);
+            const view = new DataView(wavHeader);
+
+            // RIFF chunk descriptor
+            writeString(view, 0, 'RIFF'); // ChunkID
+            view.setUint32(4, 36 + pcmData.byteLength, true); // ChunkSize
+            writeString(view, 8, 'WAVE'); // Format
+
+            // FMT sub-chunk
+            writeString(view, 12, 'fmt '); // Subchunk1ID
+            view.setUint32(16, 16, true); // Subchunk1Size (16 for PCM)
+            view.setUint16(20, 1, true); // AudioFormat (1 for PCM)
+            view.setUint16(22, numChannels, true); // NumChannels
+            view.setUint32(24, sampleRate, true); // SampleRate
+            view.setUint32(28, sampleRate * numChannels * bytesPerSample, true); // ByteRate
+            view.setUint16(32, numChannels * bytesPerSample, true); // BlockAlign
+            view.setUint16(34, bytesPerSample * 8, true); // BitsPerSample
+
+            // DATA sub-chunk
+            writeString(view, 36, 'data'); // Subchunk2ID
+            view.setUint32(40, pcmData.byteLength, true); // Subchunk2Size
+
+            const blob = new Blob([wavHeader, pcmData], { type: 'audio/wav' });
+            return blob;
+        }
+
+        function writeString(view, offset, string) {
+            for (let i = 0; i < string.length; i++) {
+                view.setUint8(offset + i, string.charCodeAt(i));
+            }
+        }
+
+        // --- Image Generation Logic ---
+        const generateImageBtn = document.getElementById('generateImageBtn');
+        const imagePromptInput = document.getElementById('imagePrompt');
+        const imageResultDiv = document.getElementById('imageResult');
+        const imageMessageP = document.getElementById('imageMessage');
+        const imageSpinner = document.getElementById('imageSpinner');
+
+        generateImageBtn.addEventListener('click', async () => {
+            const prompt = imagePromptInput.value.trim();
+            if (!prompt) {
+                imageMessageP.textContent = 'الرجاء إدخال وصف للصورة.';
+                imageMessageP.classList.remove('text-gray-500', 'text-green-600', 'text-red-600');
+                imageMessageP.classList.add('text-red-600');
+                return;
+            }
+
+            // Show loading spinner and clear previous results
+            imageSpinner.classList.remove('hidden');
+            generateImageBtn.disabled = true;
+            imageResultDiv.innerHTML = `<p id="imageMessage" class="text-gray-500">جارٍ توليد الصورة، قد يستغرق الأمر بعض الوقت...</p>`;
+
+            // Exponential backoff retry mechanism
+            let retries = 0;
+            const maxRetries = 5;
+            const baseDelay = 1000; // 1 second
+
+            while (retries < maxRetries) {
+                try {
+                    const payload = {
+                        instances: { prompt: prompt },
+                        parameters: { "sampleCount": 1 }
+                    };
+                    // The apiKey is automatically provided by Canvas when it's an empty string.
+                    const apiKey = "";
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`;
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const result = await response.json();
+
+                    if (result.predictions && result.predictions.length > 0 && result.predictions[0].bytesBase64Encoded) {
+                        const imageUrl = `data:image/png;base64,${result.predictions[0].bytesBase64Encoded}`;
+                        imageResultDiv.innerHTML = `<img src="${imageUrl}" alt="Generated Image" class="w-full h-auto rounded-lg shadow-md mx-auto max-w-sm" onerror="this.onerror=null;this.src='https://placehold.co/400x300/C59D5B/ffffff?text=Image+Error';" />`;
+                        imageMessageP.textContent = ''; // Clear message
+                        break; // Exit retry loop on success
+                    } else {
+                        imageResultDiv.innerHTML = `<p id="imageMessage" class="text-red-600">فشل في توليد الصورة: ${result.error?.message || 'استجابة غير متوقعة.'}</p>`;
+                        console.error('Image generation error:', result);
+                        // If it's a transient error, retry
+                        if (response.status >= 500 || response.status === 429) { // 5xx for server errors, 429 for too many requests
+                            retries++;
+                            const delay = baseDelay * Math.pow(2, retries);
+                            await new Promise(res => setTimeout(res, delay));
+                        } else {
+                            break; // Do not retry for client errors
+                        }
+                    }
+                } catch (error) {
+                    console.error('Fetch error during image generation:', error);
+                    imageResultDiv.innerHTML = `<p id="imageMessage" class="text-red-600">حدث خطأ أثناء الاتصال: ${error.message}.</p>`;
+                    retries++;
+                    const delay = baseDelay * Math.pow(2, retries);
+                    await new Promise(res => setTimeout(res, delay));
+                }
+            }
+
+            if (retries === maxRetries) {
+                imageResultDiv.innerHTML = `<p id="imageMessage" class="text-red-600">فشل توليد الصورة بعد عدة محاولات. يرجى المحاولة لاحقًا.</p>`;
+            }
+
+            imageSpinner.classList.add('hidden');
+            generateImageBtn.disabled = false;
+        });
+
+        // --- Text-to-Speech Logic ---
+        const generateTtsBtn = document.getElementById('generateTtsBtn');
+        const ttsTextInput = document.getElementById('ttsText');
+        const voiceSelect = document.getElementById('voiceSelect');
+        const ttsResultDiv = document.getElementById('ttsResult');
+        const ttsMessageP = document.getElementById('ttsMessage');
+        const ttsSpinner = document.getElementById('ttsSpinner');
+
+        generateTtsBtn.addEventListener('click', async () => {
+            const text = ttsTextInput.value.trim();
+            const selectedVoice = voiceSelect.value;
+            if (!text) {
+                ttsMessageP.textContent = 'الرجاء إدخال نص لتحويله إلى صوت.';
+                ttsMessageP.classList.remove('text-gray-500', 'text-green-600', 'text-red-600');
+                ttsMessageP.classList.add('text-red-600');
+                return;
+            }
+
+            // Show loading spinner and clear previous results
+            ttsSpinner.classList.remove('hidden');
+            generateTtsBtn.disabled = true;
+            ttsResultDiv.innerHTML = `<p id="ttsMessage" class="text-gray-500">جارٍ تحويل النص إلى صوت، يرجى الانتظار...</p>`;
+
+            let retries = 0;
+            const maxRetries = 5;
+            const baseDelay = 1000; // 1 second
+
+            while (retries < maxRetries) {
+                try {
+                    const payload = {
+                        contents: [{
+                            parts: [{ text: text }]
+                        }],
+                        generationConfig: {
+                            responseModalities: ["AUDIO"],
+                            speechConfig: {
+                                voiceConfig: {
+                                    prebuiltVoiceConfig: { voiceName: selectedVoice }
+                                }
+                            }
+                        },
+                        model: "gemini-2.5-flash-preview-tts"
+                    };
+
+                    const apiKey = ""; // Canvas provides this automatically
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const result = await response.json();
+                    const part = result?.candidates?.[0]?.content?.parts?.[0];
+                    const audioData = part?.inlineData?.data;
+                    const mimeType = part?.inlineData?.mimeType;
+
+                    if (audioData && mimeType && mimeType.startsWith("audio/L16")) {
+                        // Extract sample rate from mimeType if available, default to 16000
+                        const match = mimeType.match(/rate=(\d+)/);
+                        const sampleRate = match ? parseInt(match[1], 10) : 16000;
+
+                        const pcmData = base64ToArrayBuffer(audioData);
+                        const pcm16 = new Int16Array(pcmData); // PCM 16-bit signed
+
+                        const wavBlob = pcmToWav(pcm16, sampleRate);
+                        const audioUrl = URL.createObjectURL(wavBlob);
+
+                        ttsResultDiv.innerHTML = `<audio controls src="${audioUrl}" class="w-full mt-4"></audio>`;
+                        ttsMessageP.textContent = 'تم تحويل النص إلى صوت بنجاح.';
+                        ttsMessageP.classList.remove('text-gray-500', 'text-red-600');
+                        ttsMessageP.classList.add('text-green-600');
+                        break; // Exit retry loop on success
+                    } else {
+                        ttsResultDiv.innerHTML = `<p id="ttsMessage" class="text-red-600">فشل في تحويل النص إلى صوت: ${result.error?.message || 'استجابة غير متوقعة أو تنسيق غير مدعوم.'}</p>`;
+                        console.error('TTS error:', result);
+                        // If it's a transient error, retry
+                        if (response.status >= 500 || response.status === 429) {
+                            retries++;
+                            const delay = baseDelay * Math.pow(2, retries);
+                            await new Promise(res => setTimeout(res, delay));
+                        } else {
+                            break; // Do not retry for client errors
+                        }
+                    }
+                } catch (error) {
+                    console.error('Fetch error during TTS:', error);
+                    ttsResultDiv.innerHTML = `<p id="ttsMessage" class="text-red-600">حدث خطأ أثناء الاتصال: ${error.message}.</p>`;
+                    retries++;
+                    const delay = baseDelay * Math.pow(2, retries);
+                    await new Promise(res => setTimeout(res, delay));
+                }
+            }
+
+            if (retries === maxRetries) {
+                ttsResultDiv.innerHTML = `<p id="ttsMessage" class="text-red-600">فشل تحويل النص إلى صوت بعد عدة محاولات. يرجى المحاولة لاحقًا.</p>`;
+            }
+
+            ttsSpinner.classList.add('hidden');
+            generateTtsBtn.disabled = false;
+        });
+
+    </script>
+</body>
+</html>
